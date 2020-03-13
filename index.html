@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="jQuery.js" charset="utf-8"></script>
+    <script src="calculator.js" charset="utf-8"></script>
+    <title>Hyunsu's salary calculator</title>
+  </head>
+  <body>
+    <header>
+      <h1>Salary Calculator</h1>
+    </header>
+    <h2>Add Employee</h2>
+    <form class="js-add-employees">
+      <div>
+        <input type="text" placeholder="First Name" id="js-firstName" />
+        <input type="text" placeholder="Last Name" id="js-lastName" />
+        <input type="text" placeholder="ID" id="js-id" />
+        <input type="text" placeholder="First Name" id="js-title" />
+        <input type="text" placeholder="Annual Salary" id="js-annualSalary" />
+      </div>
+      <div>
+        <button class="js-submit-Info">Submit</button>
+      </div>
+    </form>
+    <h2>Employees</h2>
+    <table class="js-table">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Annual Salary</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody class="js-table-body">
+        <tr class="js-table-body-row">
+          <td>first name</td>
+          <td>last name</td>
+          <td>id</td>
+          <td>title</td>
+          <td>annual salary</td>
+          <td><button>Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <div>Total Monthly: $<span class="js-total-monthly">0</span></div>
+  </body>
+</html>
