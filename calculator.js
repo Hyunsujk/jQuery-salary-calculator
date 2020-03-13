@@ -1,6 +1,7 @@
 console.log("calculator");
 
 const employees = [];
+let totalMonthly = 0;
 
 $(document).ready(init);
 
@@ -14,8 +15,12 @@ function deleteEmployee(event) {
   //   console.log("event:", event);
   //   console.log("this:", this);
   const deleteThis = $(this).data("index");
-  //   console.log("deleteThis:",deleteThis);
+  //   console.log("deleteThis:", deleteThis);
+  //   console.log(employees[deleteThis]);
+  const amtDeducted = employees[deleteThis].annualSalary;
+  //   console.log("amtDeducted", amtDeducted);
   employees.splice(deleteThis, 1);
+  totalMonthly -= amtDeducted;
   render();
 }
 
@@ -45,7 +50,7 @@ function submitEmployeeInfo(event) {
 function render() {
   //   console.log("render");
   $(".js-table-body").empty();
-  let totalMonthly = 0;
+  //   let totalMonthly = 0;
   for (let i = 0; i < employees.length; i++) {
     const individual = employees[i];
     totalMonthly += parseFloat(individual.annualSalary);
