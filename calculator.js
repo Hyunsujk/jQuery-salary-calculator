@@ -28,4 +28,20 @@ function submitEmployeeInfo(event) {
 
 function render() {
   console.log("render");
+  $(".js-table-body").empty();
+  let totalMonthly = 0;
+  for (let i = 0; i < employees.length; i++) {
+    const individual = employees[i];
+    totalMonthly += parseFloat(individual.annualSalary);
+    console.log(("individual:", individual));
+    $(".js-table-body").append(`<tr>
+    <td>${individual.firstName}</td>
+    <td>${individual.lastName}</td>
+    <td>${individual.id}</td>
+    <td>${individual.title}</td>
+    <td>$${individual.annualSalary}</td>
+    <td><button>Delete</button></td>
+    </tr>`);
+  }
+  $(".js-total-monthly").text(totalMonthly);
 }
