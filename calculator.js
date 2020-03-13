@@ -24,6 +24,12 @@ function submitEmployeeInfo(event) {
   employees.push(employee);
   console.log(employees);
   render();
+
+  $(".js-input-firstName").val("");
+  $(".js-input-lastName").val("");
+  $(".js-input-id").val("");
+  $(".js-input-title").val("");
+  $(".js-input-annualSalary").val("");
 }
 
 function render() {
