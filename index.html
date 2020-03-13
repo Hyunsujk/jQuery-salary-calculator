@@ -14,11 +14,31 @@
     <h2>Add Employee</h2>
     <form class="js-add-employees">
       <div>
-        <input type="text" placeholder="First Name" id="js-firstName" />
-        <input type="text" placeholder="Last Name" id="js-lastName" />
-        <input type="text" placeholder="ID" id="js-id" />
-        <input type="text" placeholder="First Name" id="js-title" />
-        <input type="text" placeholder="Annual Salary" id="js-annualSalary" />
+        <input
+          class="js-input-firstName"
+          required
+          type="text"
+          placeholder="First Name"
+        />
+        <input
+          class="js-input-lastName"
+          required
+          type="text"
+          placeholder="Last Name"
+        />
+        <input class="js-input-id" required type="number" placeholder="ID" />
+        <input
+          class="js-input-title"
+          required
+          type="text"
+          placeholder="Title"
+        />
+        <input
+          class="js-input-annualSalary"
+          required
+          type="number"
+          placeholder="Annual Salary"
+        />
       </div>
       <div>
         <button class="js-submit-Info">Submit</button>
