@@ -1,0 +1,36 @@
+body {
+  margin: 0px;
+}
+
+header {
+  background: navy;
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr,
+th,
+td {
+  border: solid black;
+}
+.container {
+  margin: 15px;
+}
+
+.final {
+  text-align: right;
+}
+
+.vr {
+  margin-bottom: 15px;
+}
+
+.vr_2x {
+  margin-bottom: 30px;
+}

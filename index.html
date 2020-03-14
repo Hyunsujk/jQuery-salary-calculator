@@ -5,68 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="jQuery.js" charset="utf-8"></script>
     <script src="calculator.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="style.css" />
     <title>Hyunsu's salary calculator</title>
   </head>
   <body>
     <header>
       <h1>Salary Calculator</h1>
     </header>
-    <h2>Add Employee</h2>
-    <form class="js-add-employees">
-      <div>
-        <input
-          class="js-input-firstName"
-          required
-          type="text"
-          placeholder="First Name"
-        />
-        <input
-          class="js-input-lastName"
-          required
-          type="text"
-          placeholder="Last Name"
-        />
-        <input class="js-input-id" required type="number" placeholder="ID" />
-        <input
-          class="js-input-title"
-          required
-          type="text"
-          placeholder="Title"
-        />
-        <input
-          class="js-input-annualSalary"
-          required
-          type="number"
-          placeholder="Annual Salary"
-        />
+    <div class="container">
+      <h2>Add Employee</h2>
+      <form class="vr js-add-employees">
+        <div class="vr">
+          <input
+            class="js-input-firstName"
+            required
+            type="text"
+            placeholder="First Name"
+          />
+          <input
+            class="js-input-lastName"
+            required
+            type="text"
+            placeholder="Last Name"
+          />
+          <input class="js-input-id" required type="number" placeholder="ID" />
+          <input
+            class="js-input-title"
+            required
+            type="text"
+            placeholder="Title"
+          />
+          <input
+            class="js-input-annualSalary"
+            required
+            type="number"
+            placeholder="Annual Salary"
+          />
+        </div>
+        <div>
+          <button class=" vr js-submit-Info">Submit</button>
+        </div>
+      </form>
+      <h2>Employees</h2>
+      <table class="vr js-table">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Annual Salary</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody class="js-table-body">
+          <tr class="vr js-table-body-row">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="vr_2x final">
+        Total Monthly: $<span class="js-total-monthly">0</span>
       </div>
-      <div>
-        <button class="js-submit-Info">Submit</button>
-      </div>
-    </form>
-    <h2>Employees</h2>
-    <table class="js-table">
-      <thead>
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>ID</th>
-          <th>Title</th>
-          <th>Annual Salary</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody class="js-table-body">
-        <tr class="js-table-body-row">
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
-    <div>Total Monthly: $<span class="js-total-monthly">0</span></div>
+    </div>
   </body>
 </html>

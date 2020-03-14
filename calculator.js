@@ -15,12 +15,12 @@ function deleteEmployee(event) {
   //   console.log("event:", event);
   //   console.log("this:", this);
   const deleteThis = $(this).data("index");
-  //   console.log("deleteThis:", deleteThis);
-  //   console.log(employees[deleteThis]);
+  console.log("deleteThis:", deleteThis);
+  console.log(employees[deleteThis]);
   const amtDeducted = employees[deleteThis].annualSalary;
-  //   console.log("amtDeducted", amtDeducted);
+  console.log("amtDeducted", amtDeducted);
   employees.splice(deleteThis, 1);
-  totalMonthly -= amtDeducted;
+
   render();
 }
 
@@ -50,6 +50,7 @@ function submitEmployeeInfo(event) {
 function render() {
   //   console.log("render");
   $(".js-table-body").empty();
+  $(".js-total-monthly").empty();
   //   let totalMonthly = 0;
   for (let i = 0; i < employees.length; i++) {
     const individual = employees[i];
