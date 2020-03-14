@@ -20,7 +20,7 @@ function deleteEmployee(event) {
   const amtDeducted = employees[deleteThis].annualSalary;
   console.log("amtDeducted", amtDeducted);
   employees.splice(deleteThis, 1);
-
+  console.log(employees);
   render();
 }
 
@@ -51,7 +51,7 @@ function render() {
   //   console.log("render");
   $(".js-table-body").empty();
   $(".js-total-monthly").empty();
-  //   let totalMonthly = 0;
+  let totalMonthly = 0;
   for (let i = 0; i < employees.length; i++) {
     const individual = employees[i];
     totalMonthly += parseFloat(individual.annualSalary);
