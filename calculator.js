@@ -15,12 +15,12 @@ function deleteEmployee(event) {
   //   console.log("event:", event);
   //   console.log("this:", this);
   const deleteThis = $(this).data("index");
-  console.log("deleteThis:", deleteThis);
-  console.log(employees[deleteThis]);
-  const amtDeducted = employees[deleteThis].annualSalary;
-  console.log("amtDeducted", amtDeducted);
+  // console.log("deleteThis:", deleteThis);
+  // console.log(employees[deleteThis]);
+  // const amtDeducted = employees[deleteThis].annualSalary;
+  // console.log("amtDeducted", amtDeducted);
   employees.splice(deleteThis, 1);
-  console.log(employees);
+  // console.log(employees);
   render();
 }
 
@@ -61,8 +61,8 @@ function render() {
     <td>${individual.lastName}</td>
     <td>${individual.id}</td>
     <td>${individual.title}</td>
-    <td>$${individual.annualSalary}</td>
-    <td><button class="js-btn-delete" data-index="${i}">Delete</button></td>
+    <td class="alnRight">$${individual.annualSalary}</td>
+    <td><button class="alnCenter btn js-btn-delete" data-index="${i}">Delete</button></td>
     </tr>`);
   }
   $(".js-total-monthly").text(totalMonthly);

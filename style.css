@@ -18,7 +18,32 @@ tr,
 th,
 td {
   border: solid black;
+  padding: 10px;
 }
+
+.btn {
+  cursor: pointer;
+  background-color: lightskyblue;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
+.alnRight {
+  text-align: right;
+}
+
+.alnCenter {
+  text-align: center;
+}
+
+.js-table-head {
+  background: lightblue;
+}
+
+.js-table-body-footer {
+  background: lightblue;
+}
+
 .container {
   margin: 15px;
 }
