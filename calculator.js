@@ -1,6 +1,7 @@
-console.log("calculator");
-
+// console.log("calculator");
+// create an empty array named employees to store added employees
 const employees = [];
+// set total monthly cost to 0
 let totalMonthly = 0;
 // once the document is ready, function init will execute
 $(document).ready(init);
