@@ -52,16 +52,19 @@ function render() {
   $(".js-table-body").empty();
   $(".js-total-monthly").empty();
   let totalMonthly = 0;
+  let employeeMonthly = 0;
   for (let i = 0; i < employees.length; i++) {
     const individual = employees[i];
-    totalMonthly += parseFloat(individual.annualSalary);
+    employeeMonthly = parseFloat(individual.annualSalary / 12);
+    console.log(employeeMonthly);
+    totalMonthly += employeeMonthly;
     // console.log(("individual:", individual));
     $(".js-table-body").append(`<tr>
     <td>${individual.firstName}</td>
     <td>${individual.lastName}</td>
     <td>${individual.id}</td>
     <td>${individual.title}</td>
-    <td class="alnRight">$${individual.annualSalary}</td>
+    <td class="alnRight">$${employeeMonthly}</td>
     <td><button class="alnCenter btn js-btn-delete" data-index="${i}">Delete</button></td>
     </tr>`);
   }
