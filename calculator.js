@@ -56,7 +56,7 @@ function render() {
   for (let i = 0; i < employees.length; i++) {
     const individual = employees[i];
     employeeMonthly = parseFloat(individual.annualSalary / 12);
-    console.log(employeeMonthly);
+    // console.log(employeeMonthly);
     totalMonthly += employeeMonthly;
     // console.log(("individual:", individual));
     $(".js-table-body").append(`<tr>
@@ -69,4 +69,10 @@ function render() {
     </tr>`);
   }
   $(".js-total-monthly").text(totalMonthly);
+
+  if (totalMonthly > 20000) {
+    $(".final").css("background-color", "red");
+  } else {
+    $(".final").css("background-color", "white");
+  }
 }
